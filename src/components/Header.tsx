@@ -1,4 +1,4 @@
-import { Wand2, Settings2, RotateCcw, Monitor } from 'lucide-react';
+import { Wand2, SlidersHorizontal, RotateCcw, Monitor } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useConfig } from '../context/ConfigContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -27,9 +27,7 @@ export function Header({ mode, onModeChange }: HeaderProps) {
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)]/80 dark:bg-[var(--color-bg-dark)]/80 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] flex items-center justify-center text-white">
-            <Settings2 size={18} />
-          </div>
+          <img src="/easytier.png" alt="EasyTier" className="w-8 h-8 rounded-lg" />
           <h1 className="text-lg font-semibold text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]">
             {t('appTitle')}
           </h1>
@@ -76,7 +74,7 @@ export function Header({ mode, onModeChange }: HeaderProps) {
                   : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
               }`}
             >
-              <Settings2 size={14} />
+              <SlidersHorizontal size={14} />
               {t('expertMode')}
             </button>
           </div>
