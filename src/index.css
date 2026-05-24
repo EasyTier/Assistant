@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: #fff;
+  --color-bg-dark: #16171d;
+  --color-surface: #f9f9fb;
+  --color-surface-dark: #1f2028;
+  --color-text: #6b6375;
+  --color-text-dark: #9ca3af;
+  --color-text-h: #08060d;
+  --color-text-h-dark: #f3f4f6;
+  --color-border: #e5e4e7;
+  --color-border-dark: #2e303a;
+  --color-code-bg: #f4f3ec;
+  --color-code-bg-dark: #1f2028;
+  --color-accent: #aa3bff;
+  --color-accent-dark: #c084fc;
+  --color-accent-bg: rgba(170, 59, 255, 0.1);
+  --color-accent-bg-dark: rgba(192, 132, 252, 0.15);
+  --color-accent-border: rgba(170, 59, 255, 0.5);
+  --color-accent-border-dark: rgba(192, 132, 252, 0.5);
+
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+}
+
+:root {
+  font: 16px/145% var(--font-sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
+}

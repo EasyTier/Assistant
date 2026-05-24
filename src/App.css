@@ -1,0 +1,24 @@
+/* App-specific styles using Tailwind where possible */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-dark);
+  }
+}
+
+/* Smooth scroll for expert nav */
+html {
+  scroll-behavior: smooth;
+}
