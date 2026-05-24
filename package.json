@@ -1,7 +1,8 @@
 {
-  "name": "et-config-gen",
+  "name": "easytier-assistant",
   "private": true,
   "version": "0.0.0",
+  "packageManager": "pnpm@10.33.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
