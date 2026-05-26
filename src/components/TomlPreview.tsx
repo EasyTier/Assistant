@@ -19,7 +19,7 @@ export function TomlPreview() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-40 w-[calc(100%-2rem)] max-w-xl">
+    <div className="fixed bottom-0 left-0 z-40 w-full sm:bottom-4 sm:right-4 sm:left-auto sm:w-[calc(100%-2rem)] sm:max-w-xl">
       <div className="rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] shadow-lg overflow-hidden">
         <button
           type="button"
@@ -33,7 +33,7 @@ export function TomlPreview() {
         {!collapsed && (
           <>
             <div className="border-t border-[var(--color-border)] dark:border-[var(--color-border-dark)]">
-              <pre className="max-h-80 overflow-auto p-4 text-xs font-mono text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-[var(--color-code-bg)] dark:bg-[var(--color-code-bg-dark)]">
+              <pre className="max-h-60 sm:max-h-80 overflow-auto p-4 text-xs font-mono text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-[var(--color-code-bg)] dark:bg-[var(--color-code-bg-dark)]">
                 {toml || t('noConfig')}
               </pre>
             </div>

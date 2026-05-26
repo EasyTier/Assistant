@@ -33,7 +33,7 @@ export function WizardNav({ steps, currentStep }: WizardNavProps) {
                   )}
                 </div>
                 <span
-                  className={`text-xs whitespace-nowrap ${
+                  className={`hidden sm:block text-xs whitespace-nowrap ${
                     isActive
                       ? 'text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] font-medium'
                       : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)]'

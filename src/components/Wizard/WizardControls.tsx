@@ -20,10 +20,10 @@ export function WizardControls({ currentStep, totalSteps, onPrev, onNext, onDown
         type="button"
         onClick={onPrev}
         disabled={isFirst}
-        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+        className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
       >
         <ChevronLeft size={16} />
-        {t('prevStep')}
+        <span className="hidden sm:inline">{t('prevStep')}</span>
       </button>
 
       <span className="text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)]">
@@ -34,18 +34,18 @@ export function WizardControls({ currentStep, totalSteps, onPrev, onNext, onDown
         <button
           type="button"
           onClick={onDownload}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-white bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] hover:opacity-90 transition-opacity"
         >
           <FileDown size={16} />
-          {t('download')}
+          <span className="hidden sm:inline">{t('download')}</span>
         </button>
       ) : (
         <button
           type="button"
           onClick={onNext}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-white bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] hover:opacity-90 transition-opacity"
         >
-          {t('nextStep')}
+          <span className="hidden sm:inline">{t('nextStep')}</span>
           <ChevronRight size={16} />
         </button>
       )}

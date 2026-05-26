@@ -26,9 +26,9 @@ export function Header({ mode, onModeChange }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)]/80 dark:bg-[var(--color-bg-dark)]/80 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <img src="/easytier.png" alt="EasyTier" className="w-8 h-8 rounded-lg" />
-          <h1 className="text-lg font-semibold text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]">
+        <div className="flex items-center gap-2 min-w-0">
+          <img src="/easytier.png" alt="EasyTier" className="w-8 h-8 rounded-lg shrink-0" />
+          <h1 className="text-lg font-semibold text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] truncate">
             {t('appTitle')}
           </h1>
         </div>
@@ -56,26 +56,26 @@ export function Header({ mode, onModeChange }: HeaderProps) {
             <button
               type="button"
               onClick={() => onModeChange('wizard')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-sm font-medium transition-colors ${
                 mode === 'wizard'
                   ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
                   : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
               }`}
             >
               <Wand2 size={14} />
-              {t('wizardMode')}
+              <span className="hidden sm:inline">{t('wizardMode')}</span>
             </button>
             <button
               type="button"
               onClick={() => onModeChange('expert')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-sm font-medium transition-colors ${
                 mode === 'expert'
                   ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
                   : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
               }`}
             >
               <SlidersHorizontal size={14} />
-              {t('expertMode')}
+              <span className="hidden sm:inline">{t('expertMode')}</span>
             </button>
           </div>
 

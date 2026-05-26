@@ -57,11 +57,11 @@ export function ExpertPanel() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-3.5rem)]">
+    <div className="flex flex-col md:flex-row h-[calc(100vh-3.5rem)]">
       <ExpertNav activeSection={activeSection} onNavigate={handleNavigate} />
       <div
         ref={mainRef}
-        className="flex-1 overflow-y-auto p-6 space-y-10"
+        className="flex-1 overflow-y-auto p-4 md:p-6 space-y-10"
       >
         <SectionNetwork />
         <SectionIP />

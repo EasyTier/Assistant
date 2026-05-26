@@ -45,7 +45,7 @@ export function RepeatableField({ values, onChange, placeholder, addLabel }: Rep
           className="inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-white bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] hover:opacity-90 transition-opacity"
         >
           <Plus size={16} />
-          {addLabel}
+          <span className="hidden sm:inline">{addLabel}</span>
         </button>
       </div>
       {values.length > 0 && (
