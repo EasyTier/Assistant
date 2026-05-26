@@ -54,6 +54,7 @@ export const en = {
   mappedListenAddr: 'Mapped listen addresses',
   addMappedListener: 'Add Mapped Listener',
   connectionsDesc: 'Choose networking method and configure connection nodes.',
+  noPeersWarning: 'No peers added. This node cannot actively connect to others and may fail to form a network.\nGet public nodes from EasyTier Pro (console.easytier.net).',
 
   // Proxy & Routes
   proxyAndRoutes: 'Proxy & Routes',

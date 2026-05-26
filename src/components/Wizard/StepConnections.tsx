@@ -30,16 +30,23 @@ export function StepConnections() {
       </FormField>
 
       {config.networking_method === 'manual' && (
-        <FormField label={t('peers')} description={t('peerDesc')}>
-          <RepeatableField
-            values={config.peers?.map((p) => p.uri) ?? []}
-            onChange={(uris) =>
-              updateConfig({ peers: uris.map((uri) => ({ uri })) })
-            }
-            placeholder="tcp://host:11010"
-            addLabel={t('addPeer')}
-          />
-        </FormField>
+        <>
+          {(config.peers?.length ?? 0) === 0 && (
+            <div className="rounded-lg border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-900/20 px-4 py-3 text-sm text-amber-800 dark:text-amber-200 whitespace-pre-line">
+              {t('noPeersWarning')}
+            </div>
+          )}
+          <FormField label={t('peers')} description={t('peerDesc')}>
+            <RepeatableField
+              values={config.peers?.map((p) => p.uri) ?? []}
+              onChange={(uris) =>
+                updateConfig({ peers: uris.map((uri) => ({ uri })) })
+              }
+              placeholder="tcp://host:11010"
+              addLabel={t('addPeer')}
+            />
+          </FormField>
+        </>
       )}
     </div>
   );

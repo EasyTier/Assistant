@@ -1,4 +1,4 @@
-import { Wand2, SlidersHorizontal, RotateCcw, Monitor } from 'lucide-react';
+import { Wand2, SlidersHorizontal, Monitor } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useConfig } from '../context/ConfigContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -17,7 +17,7 @@ const osOptions = [
 
 export function Header({ mode, onModeChange }: HeaderProps) {
   const { t } = useTranslation();
-  const { config, updateConfig, resetConfig } = useConfig();
+  const { config, updateConfig } = useConfig();
 
   const handleOSChange = (os: TargetOS) => {
     updateConfig({ target_os: os });
@@ -34,10 +34,8 @@ export function Header({ mode, onModeChange }: HeaderProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher />
-
           {/* Platform selector */}
-          <div className="hidden sm:inline-flex items-center gap-1.5 mr-1">
+          <div className="hidden sm:inline-flex items-center gap-1.5">
             <Monitor size={14} className="text-[var(--color-text)] dark:text-[var(--color-text-dark)]" />
             <select
               value={config.target_os}
@@ -79,14 +77,7 @@ export function Header({ mode, onModeChange }: HeaderProps) {
             </button>
           </div>
 
-          <button
-            type="button"
-            onClick={resetConfig}
-            title={t('resetConfig')}
-            className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)] transition-colors"
-          >
-            <RotateCcw size={16} />
-          </button>
+          <LanguageSwitcher />
         </div>
       </div>
     </header>

@@ -9,16 +9,21 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   return (
-    <select
-      value={i18n.language}
-      onChange={(e) => i18n.changeLanguage(e.target.value)}
-      className="text-sm bg-transparent text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] cursor-pointer"
-    >
+    <div className="inline-flex rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
       {languages.map((lang) => (
-        <option key={lang.code} value={lang.code}>
+        <button
+          key={lang.code}
+          type="button"
+          onClick={() => i18n.changeLanguage(lang.code)}
+          className={`inline-flex items-center px-2 sm:px-3 py-1.5 text-sm font-medium transition-colors ${
+            i18n.language === lang.code
+              ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+              : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
+          }`}
+        >
           {lang.label}
-        </option>
+        </button>
       ))}
-    </select>
+    </div>
   );
 }

@@ -54,6 +54,7 @@ export const zh = {
   mappedListenAddr: '映射监听地址',
   addMappedListener: '添加 Mapped Listener',
   connectionsDesc: '选择组网方式并配置连接节点。',
+  noPeersWarning: '未填写任何 Peers，该节点将无法主动连接其他节点，可能无法组网。\n可通过 EasyTier Pro（console.easytier.net）获取公共节点。',
 
   // Proxy & Routes
   proxyAndRoutes: '代理与路由',

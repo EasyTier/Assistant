@@ -53,7 +53,7 @@ export function Wizard() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
-      <WizardNav steps={steps} currentStep={currentStep} />
+      <WizardNav steps={steps} currentStep={currentStep} onStepClick={setCurrentStep} />
       <div className="mt-8 p-6 rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] flex flex-col gap-6">
         <StepComponent />
         <WizardControls
