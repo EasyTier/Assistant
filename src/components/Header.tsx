@@ -54,7 +54,7 @@ export function Header({ mode, onModeChange }: HeaderProps) {
             <select
               value={config.target_os}
               onChange={(e) => handleOSChange(e.target.value as TargetOS)}
-              className="text-sm bg-white dark:bg-[var(--color-surface-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] cursor-pointer border-0"
+              className="text-sm bg-white dark:bg-[var(--color-surface-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] cursor-pointer"
             >
               {osOptions.map((opt) => (
                 <option key={opt.value} value={opt.value}>

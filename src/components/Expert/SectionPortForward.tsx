@@ -43,7 +43,7 @@ export function SectionPortForward() {
                 value={fw.bind_addr}
                 onChange={(e) => updateForward(i, 'bind_addr', e.target.value)}
                 placeholder="0.0.0.0:11011"
-                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] border-0"
+                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)]"
               />
             </FormField>
             <FormField label={t('dstAddress')} htmlFor={`fw-dst-${i}`}>
@@ -53,7 +53,7 @@ export function SectionPortForward() {
                 value={fw.dst_addr}
                 onChange={(e) => updateForward(i, 'dst_addr', e.target.value)}
                 placeholder="192.168.1.1:80"
-                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] border-0"
+                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)]"
               />
             </FormField>
             <FormField label={t('protocol')} htmlFor={`fw-proto-${i}`}>
@@ -61,7 +61,7 @@ export function SectionPortForward() {
                 id={`fw-proto-${i}`}
                 value={fw.proto}
                 onChange={(e) => updateForward(i, 'proto', e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] border-0"
+                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)]"
               >
                 <option value="tcp">TCP</option>
                 <option value="udp">UDP</option>
