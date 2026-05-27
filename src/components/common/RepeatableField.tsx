@@ -37,7 +37,7 @@ export function RepeatableField({ values, onChange, placeholder, addLabel }: Rep
             }
           }}
           placeholder={placeholder}
-          className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm border border-[var(--color-border)] dark:border-[var(--color-border-dark)] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
+          className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[#27272a] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm border border-[var(--color-border)] dark:border-[#3f3f46] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
         />
         <button
           type="button"
