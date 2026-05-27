@@ -22,15 +22,15 @@ export function StepReview() {
       <p className="text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)]">
         {t('reviewDesc')}
       </p>
-      <div className="rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
-        <div className="flex items-center justify-between px-4 py-2 border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]">
+      <div className="rounded-2xl shadow-sm overflow-hidden">
+        <div className="flex items-center justify-between px-4 py-3 bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]">
           <span className="text-sm font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]">
             easytier-config.toml
           </span>
           <button
             type="button"
             onClick={handleCopy}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-bg)] dark:hover:bg-[var(--color-bg-dark)] transition-colors"
+            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-white dark:bg-transparent border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)] transition-colors"
           >
             {copied ? <Check size={12} /> : <Copy size={12} />}
             {copied ? t('copied') : t('copy')}

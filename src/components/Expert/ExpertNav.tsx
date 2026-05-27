@@ -32,7 +32,7 @@ export function ExpertNav({ activeSection, onNavigate }: ExpertNavProps) {
   return (
     <>
       {/* Mobile dropdown */}
-      <div className="md:hidden shrink-0 border-b border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)]">
+      <div className="md:hidden shrink-0 bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] shadow-sm">
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -42,16 +42,16 @@ export function ExpertNav({ activeSection, onNavigate }: ExpertNavProps) {
           {mobileOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </button>
         {mobileOpen && (
-          <ul className="border-t border-[var(--color-border)] dark:border-[var(--color-border-dark)] py-2 px-2 space-y-0.5">
+          <ul className="border-t border-[var(--color-border)] dark:border-[var(--color-border-dark)] py-2 px-2 space-y-1">
             {sections.map((s) => (
               <li key={s.id}>
                 <button
                   type="button"
                   onClick={() => handleClick(s.id)}
-                  className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                  className={`w-full text-left px-3 py-2 rounded-xl text-sm transition-colors ${
                     activeSection === s.id
-                      ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-accent)] dark:text-[var(--color-accent-dark)] font-medium'
-                      : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
+                      ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] font-medium'
+                      : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
                   }`}
                 >
                   {s.label}
@@ -63,17 +63,17 @@ export function ExpertNav({ activeSection, onNavigate }: ExpertNavProps) {
       </div>
 
       {/* Desktop sidebar */}
-      <nav className="hidden md:block sticky top-14 h-[calc(100vh-3.5rem)] w-48 shrink-0 overflow-y-auto border-r border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] py-4">
+      <nav className="hidden md:block sticky top-14 h-[calc(100vh-3.5rem)] w-48 shrink-0 overflow-y-auto bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] py-4">
         <ul className="space-y-0.5 px-2">
           {sections.map((s) => (
             <li key={s.id}>
               <button
                 type="button"
                 onClick={() => onNavigate(s.id)}
-                className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                className={`w-full text-left px-3 py-2 rounded-xl text-sm transition-colors ${
                   activeSection === s.id
-                    ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-accent)] dark:text-[var(--color-accent-dark)] font-medium'
-                    : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
+                    ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] font-medium'
+                    : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
                 }`}
               >
                 {s.label}

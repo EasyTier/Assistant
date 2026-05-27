@@ -36,16 +36,16 @@ export function StepPlatform() {
               key={p.value}
               type="button"
               onClick={() => handleSelect(p.value)}
-              className={`flex items-center gap-4 p-4 rounded-xl border text-left transition-all ${
+              className={`flex items-center gap-4 p-6 rounded-2xl text-left transition-all shadow-sm ${
                 active
-                  ? 'border-[var(--color-accent)] dark:border-[var(--color-accent-dark)] bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)]'
-                  : 'border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] hover:border-[var(--color-accent)] dark:hover:border-[var(--color-accent-dark)]'
+                  ? 'ring-1 ring-[var(--color-text-h)] dark:ring-[var(--color-text-h-dark)] bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)]'
+                  : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] hover:shadow-md'
               }`}
             >
               <div
-                className={`w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold shrink-0 ${
+                className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg font-bold shrink-0 ${
                   active
-                    ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+                    ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
                     : 'bg-[var(--color-code-bg)] dark:bg-[var(--color-code-bg-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]'
                 }`}
               >
@@ -63,7 +63,7 @@ export function StepPlatform() {
               </div>
               {active && (
                 <svg
-                  className="ml-auto shrink-0 text-[var(--color-accent)] dark:text-[var(--color-accent-dark)]"
+                  className="ml-auto shrink-0 text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]"
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"

@@ -34,7 +34,7 @@ export function SectionPortForward() {
         {forwards.map((fw, i) => (
           <div
             key={i}
-            className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto_auto] gap-2 items-end p-3 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]"
+            className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto_auto] gap-2 items-end p-4 rounded-xl shadow-sm bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]"
           >
             <FormField label={t('localBind')} htmlFor={`fw-bind-${i}`}>
               <input
@@ -43,7 +43,7 @@ export function SectionPortForward() {
                 value={fw.bind_addr}
                 onChange={(e) => updateForward(i, 'bind_addr', e.target.value)}
                 placeholder="0.0.0.0:11011"
-                className="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] transition-shadow"
+                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
               />
             </FormField>
             <FormField label={t('dstAddress')} htmlFor={`fw-dst-${i}`}>
@@ -53,7 +53,7 @@ export function SectionPortForward() {
                 value={fw.dst_addr}
                 onChange={(e) => updateForward(i, 'dst_addr', e.target.value)}
                 placeholder="192.168.1.1:80"
-                className="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] transition-shadow"
+                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
               />
             </FormField>
             <FormField label={t('protocol')} htmlFor={`fw-proto-${i}`}>
@@ -61,7 +61,7 @@ export function SectionPortForward() {
                 id={`fw-proto-${i}`}
                 value={fw.proto}
                 onChange={(e) => updateForward(i, 'proto', e.target.value)}
-                className="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] transition-shadow"
+                className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
               >
                 <option value="tcp">TCP</option>
                 <option value="udp">UDP</option>
@@ -70,7 +70,7 @@ export function SectionPortForward() {
             <button
               type="button"
               onClick={() => removeForward(i)}
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-red-500 hover:bg-red-500/10 transition-colors"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-xl text-red-500 hover:bg-red-500/10 transition-colors"
             >
               <Trash2 size={16} />
             </button>
@@ -79,7 +79,7 @@ export function SectionPortForward() {
         <button
           type="button"
           onClick={addForward}
-          className="inline-flex items-center justify-center gap-1.5 w-full py-2 rounded-lg border border-dashed border-[var(--color-border)] dark:border-[var(--color-border-dark)] text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:border-[var(--color-accent)] dark:hover:border-[var(--color-accent-dark)] hover:text-[var(--color-accent)] dark:hover:text-[var(--color-accent-dark)] transition-colors"
+          className="inline-flex items-center justify-center gap-1.5 w-full py-2.5 rounded-xl border border-dashed border-[var(--color-border)] dark:border-[var(--color-border-dark)] text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:border-[var(--color-text-h)] dark:hover:border-[var(--color-text-h-dark)] hover:text-[var(--color-text-h)] dark:hover:text-[var(--color-text-h-dark)] transition-colors"
         >
           <Plus size={16} />
           {t('addPortForwardRule')}

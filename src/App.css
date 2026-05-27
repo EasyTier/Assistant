@@ -8,14 +8,13 @@
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-border-dark);
+}
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 3px;
-}
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-border-dark);
-  }
 }
 
 /* Smooth scroll for expert nav */

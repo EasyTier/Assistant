@@ -9,16 +9,16 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   return (
-    <div className="inline-flex rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
+    <div className="flex items-center gap-1">
       {languages.map((lang) => (
         <button
           key={lang.code}
           type="button"
           onClick={() => i18n.changeLanguage(lang.code)}
-          className={`inline-flex items-center px-2 sm:px-3 py-1.5 text-sm font-medium transition-colors ${
+          className={`inline-flex items-center px-3 py-2 text-sm font-medium rounded-xl transition-colors ${
             i18n.language === lang.code
-              ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
-              : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
+              ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
+              : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
           }`}
         >
           {lang.label}

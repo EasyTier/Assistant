@@ -20,7 +20,7 @@ export function TomlPreview() {
 
   return (
     <div className="fixed bottom-0 left-0 z-40 w-full sm:bottom-4 sm:right-4 sm:left-auto sm:w-[calc(100%-2rem)] sm:max-w-xl">
-      <div className="rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] shadow-lg overflow-hidden">
+      <div className="rounded-2xl bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] shadow-xl overflow-hidden">
         <button
           type="button"
           onClick={() => setCollapsed(!collapsed)}
@@ -41,7 +41,7 @@ export function TomlPreview() {
               <button
                 type="button"
                 onClick={handleCopy}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-bg)] dark:hover:bg-[var(--color-bg-dark)] transition-colors"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-white dark:bg-transparent border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)] transition-colors"
               >
                 {copied ? <Check size={14} /> : <Copy size={14} />}
                 {copied ? t('copied') : t('copy')}
@@ -49,7 +49,7 @@ export function TomlPreview() {
               <button
                 type="button"
                 onClick={() => downloadToml(config)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-white bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium text-white dark:text-black bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] hover:opacity-90 transition-opacity"
               >
                 <FileDown size={14} />
                 {t('download')}

@@ -3,26 +3,26 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-bg: #f8fafc;
-  --color-bg-dark: #0f172a;
-  --color-surface: #f1f5f9;
-  --color-surface-dark: #1e293b;
-  --color-text: #64748b;
-  --color-text-dark: #94a3b8;
-  --color-text-h: #0f172a;
-  --color-text-h-dark: #f1f5f9;
-  --color-border: #e2e8f0;
-  --color-border-dark: #334155;
-  --color-code-bg: #f1f5f9;
-  --color-code-bg-dark: #1e293b;
-  --color-accent: #2563eb;
-  --color-accent-dark: #60a5fa;
-  --color-accent-bg: rgba(37, 99, 235, 0.08);
-  --color-accent-bg-dark: rgba(96, 165, 250, 0.12);
-  --color-accent-border: rgba(37, 99, 235, 0.4);
-  --color-accent-border-dark: rgba(96, 165, 250, 0.4);
+  --color-bg: #fafafa;
+  --color-bg-dark: #09090b;
+  --color-surface: #ffffff;
+  --color-surface-dark: #18181b;
+  --color-text: #71717a;
+  --color-text-dark: #a1a1aa;
+  --color-text-h: #18181b;
+  --color-text-h-dark: #fafafa;
+  --color-border: #e4e4e7;
+  --color-border-dark: #27272a;
+  --color-code-bg: #f4f4f5;
+  --color-code-bg-dark: #18181b;
+  --color-accent: #18181b;
+  --color-accent-dark: #fafafa;
+  --color-accent-bg: rgba(24, 24, 27, 0.06);
+  --color-accent-bg-dark: rgba(250, 250, 250, 0.08);
+  --color-accent-border: rgba(24, 24, 27, 0.2);
+  --color-accent-border-dark: rgba(250, 250, 250, 0.15);
 
-  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, Consolas, monospace;
 }
 
@@ -42,9 +42,7 @@ body {
   color: var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--color-bg-dark);
-    color: var(--color-text-dark);
-  }
+.dark body {
+  background: var(--color-bg-dark);
+  color: var(--color-text-dark);
 }

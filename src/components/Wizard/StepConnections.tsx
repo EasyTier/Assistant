@@ -32,7 +32,7 @@ export function StepConnections() {
       {config.networking_method === 'manual' && (
         <>
           {(config.peers?.length ?? 0) === 0 && (
-            <div className="rounded-lg border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-900/20 px-4 py-3 text-sm text-amber-800 dark:text-amber-200 whitespace-pre-line">
+            <div className="rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-900/20 px-4 py-3 text-sm text-amber-800 dark:text-amber-200 whitespace-pre-line">
               {t('noPeersWarning')}
             </div>
           )}

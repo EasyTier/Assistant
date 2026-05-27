@@ -28,7 +28,7 @@ export function StepNetwork() {
               })
             }
             placeholder="default"
-            className="flex-1 min-w-0 px-3 py-2 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] transition-shadow"
+            className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
           />
           <button
             type="button"
@@ -38,7 +38,7 @@ export function StepNetwork() {
               })
             }
             title={t('randomGenerate')}
-            className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-[var(--color-text)] dark:text-[var(--color-text-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)] transition-colors shrink-0"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-xl text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-white dark:bg-[var(--color-surface-dark)] shadow-sm hover:shadow transition-shadow shrink-0"
           >
             <Shuffle size={14} />
           </button>
@@ -56,13 +56,13 @@ export function StepNetwork() {
               })
             }
             placeholder={t('emptyMeansNoPassword')}
-            className="flex-1 min-w-0 px-3 py-2 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] transition-shadow"
+            className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
           />
           <button
             type="button"
             onClick={() => setShowSecret((v) => !v)}
             title={showSecret ? t('hide') : t('show')}
-            className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-[var(--color-text)] dark:text-[var(--color-text-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)] transition-colors shrink-0"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-xl text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-white dark:bg-[var(--color-surface-dark)] shadow-sm hover:shadow transition-shadow shrink-0"
           >
             {showSecret ? <EyeOff size={14} /> : <Eye size={14} />}
           </button>
@@ -74,7 +74,7 @@ export function StepNetwork() {
               })
             }
             title={t('randomGenerate')}
-            className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-[var(--color-text)] dark:text-[var(--color-text-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)] transition-colors shrink-0"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-xl text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] bg-white dark:bg-[var(--color-surface-dark)] shadow-sm hover:shadow transition-shadow shrink-0"
           >
             <Shuffle size={14} />
           </button>
@@ -87,7 +87,7 @@ export function StepNetwork() {
           value={config.instance_name ?? ''}
           onChange={(e) => updateConfig({ instance_name: e.target.value })}
           placeholder="default"
-          className="w-full px-3 py-2 rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] dark:focus:ring-[var(--color-accent-dark)] transition-shadow"
+          className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
         />
       </FormField>
     </div>

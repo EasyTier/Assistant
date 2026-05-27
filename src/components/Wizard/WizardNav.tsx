@@ -23,12 +23,12 @@ export function WizardNav({ steps, currentStep, onStepClick }: WizardNavProps) {
                 className="flex flex-col items-center gap-1.5 bg-transparent border-0 p-0 disabled:cursor-default"
               >
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
+                  className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
                     isActive
-                      ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+                      ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
                       : isCompleted
-                      ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-accent)] dark:text-[var(--color-accent-dark)]'
-                      : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] text-[var(--color-text)] dark:text-[var(--color-text-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)]'
+                      ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]'
+                      : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] text-[var(--color-text)] dark:text-[var(--color-text-dark)] shadow-sm'
                   } ${clickable ? 'cursor-pointer hover:opacity-80' : ''}`}
                 >
                   {isCompleted ? (
