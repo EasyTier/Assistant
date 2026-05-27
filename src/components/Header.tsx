@@ -1,6 +1,8 @@
-import { Wand2, SlidersHorizontal, Monitor } from 'lucide-react';
+import { Wand2, SlidersHorizontal, Monitor, Sun, Moon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 import { useConfig } from '../context/ConfigContext';
+import { getTheme, setTheme, type ThemeMode } from '../utils/theme';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import type { TargetOS } from '../types/config';
 
@@ -18,9 +20,21 @@ const osOptions = [
 export function Header({ mode, onModeChange }: HeaderProps) {
   const { t } = useTranslation();
   const { config, updateConfig } = useConfig();
+  const [theme, setThemeState] = useState<ThemeMode>(getTheme);
+
+  useEffect(() => {
+    const handler = () => setThemeState(getTheme());
+    window.addEventListener('storage', handler);
+    return () => window.removeEventListener('storage', handler);
+  }, []);
 
   const handleOSChange = (os: TargetOS) => {
     updateConfig({ target_os: os });
+  };
+
+  const handleThemeChange = (newTheme: ThemeMode) => {
+    setTheme(newTheme);
+    setThemeState(newTheme);
   };
 
   return (
@@ -78,6 +92,31 @@ export function Header({ mode, onModeChange }: HeaderProps) {
           </div>
 
           <LanguageSwitcher />
+
+          <div className="inline-flex rounded-lg border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
+            <button
+              type="button"
+              onClick={() => handleThemeChange('light')}
+              className={`inline-flex items-center justify-center w-8 h-8 transition-colors ${
+                theme === 'light'
+                  ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+                  : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
+              }`}
+            >
+              <Sun size={14} />
+            </button>
+            <button
+              type="button"
+              onClick={() => handleThemeChange('dark')}
+              className={`inline-flex items-center justify-center w-8 h-8 transition-colors ${
+                theme === 'dark'
+                  ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+                  : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-surface)] dark:hover:bg-[var(--color-surface-dark)]'
+              }`}
+            >
+              <Moon size={14} />
+            </button>
+          </div>
         </div>
       </div>
     </header>

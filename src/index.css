@@ -3,24 +3,24 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-bg: #fff;
-  --color-bg-dark: #16171d;
-  --color-surface: #f9f9fb;
-  --color-surface-dark: #1f2028;
-  --color-text: #6b6375;
-  --color-text-dark: #9ca3af;
-  --color-text-h: #08060d;
-  --color-text-h-dark: #f3f4f6;
-  --color-border: #e5e4e7;
-  --color-border-dark: #2e303a;
-  --color-code-bg: #f4f3ec;
-  --color-code-bg-dark: #1f2028;
-  --color-accent: #aa3bff;
-  --color-accent-dark: #c084fc;
-  --color-accent-bg: rgba(170, 59, 255, 0.1);
-  --color-accent-bg-dark: rgba(192, 132, 252, 0.15);
-  --color-accent-border: rgba(170, 59, 255, 0.5);
-  --color-accent-border-dark: rgba(192, 132, 252, 0.5);
+  --color-bg: #f8fafc;
+  --color-bg-dark: #0f172a;
+  --color-surface: #f1f5f9;
+  --color-surface-dark: #1e293b;
+  --color-text: #64748b;
+  --color-text-dark: #94a3b8;
+  --color-text-h: #0f172a;
+  --color-text-h-dark: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-dark: #334155;
+  --color-code-bg: #f1f5f9;
+  --color-code-bg-dark: #1e293b;
+  --color-accent: #2563eb;
+  --color-accent-dark: #60a5fa;
+  --color-accent-bg: rgba(37, 99, 235, 0.08);
+  --color-accent-bg-dark: rgba(96, 165, 250, 0.12);
+  --color-accent-border: rgba(37, 99, 235, 0.4);
+  --color-accent-border-dark: rgba(96, 165, 250, 0.4);
 
   --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, Consolas, monospace;
