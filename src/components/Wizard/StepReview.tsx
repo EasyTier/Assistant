@@ -22,7 +22,7 @@ export function StepReview() {
       <p className="text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)]">
         {t('reviewDesc')}
       </p>
-      <div className="rounded-2xl shadow-sm overflow-hidden">
+      <div className="rounded-2xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
         <div className="flex items-center justify-between px-4 py-3 bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]">
           <span className="text-sm font-medium text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]">
             easytier-config.toml

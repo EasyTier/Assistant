@@ -20,7 +20,7 @@ export function TomlPreview() {
 
   return (
     <div className="fixed bottom-0 left-0 z-40 w-full sm:bottom-4 sm:right-4 sm:left-auto sm:w-[calc(100%-2rem)] sm:max-w-xl">
-      <div className="rounded-2xl bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] shadow-xl overflow-hidden">
+      <div className="rounded-2xl bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
         <button
           type="button"
           onClick={() => setCollapsed(!collapsed)}

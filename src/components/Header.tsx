@@ -38,7 +38,7 @@ export function Header({ mode, onModeChange }: HeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--color-bg)]/80 dark:bg-[var(--color-bg-dark)]/80 backdrop-blur shadow-sm">
+    <header className="sticky top-0 z-50 bg-[var(--color-bg)]/80 dark:bg-[var(--color-bg-dark)]/80 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2 min-w-0">
           <img src="/easytier.png" alt="EasyTier" className="w-8 h-8 rounded-xl shrink-0" />
@@ -54,7 +54,7 @@ export function Header({ mode, onModeChange }: HeaderProps) {
             <select
               value={config.target_os}
               onChange={(e) => handleOSChange(e.target.value as TargetOS)}
-              className="text-sm bg-white dark:bg-[var(--color-surface-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] shadow-sm cursor-pointer border-0"
+              className="text-sm bg-white dark:bg-[var(--color-surface-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] cursor-pointer border-0"
             >
               {osOptions.map((opt) => (
                 <option key={opt.value} value={opt.value}>

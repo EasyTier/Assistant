@@ -36,10 +36,10 @@ export function StepPlatform() {
               key={p.value}
               type="button"
               onClick={() => handleSelect(p.value)}
-              className={`flex items-center gap-4 p-6 rounded-2xl text-left transition-all shadow-sm ${
+              className={`flex items-center gap-4 p-6 rounded-2xl text-left transition-all ${
                 active
                   ? 'ring-1 ring-[var(--color-text-h)] dark:ring-[var(--color-text-h-dark)] bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)]'
-                  : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] hover:shadow-md'
+                  : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]'
               }`}
             >
               <div

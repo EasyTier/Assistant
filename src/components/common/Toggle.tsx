@@ -17,7 +17,7 @@ export function Toggle({ checked, onChange, label, id }: ToggleProps) {
           onChange={(e) => onChange(e.target.checked)}
         />
         <div className="w-11 h-6 bg-[var(--color-border)] dark:bg-[var(--color-border-dark)] rounded-full peer peer-checked:bg-[var(--color-accent)] dark:peer-checked:bg-[var(--color-accent-dark)] transition-colors" />
-        <div className="absolute top-0.5 left-0.5 w-5 h-5 bg-white dark:bg-black rounded-full shadow transition-transform peer-checked:translate-x-5" />
+        <div className="absolute top-0.5 left-0.5 w-5 h-5 bg-white dark:bg-black rounded-full transition-transform peer-checked:translate-x-5" />
       </div>
       {label && (
         <span className="text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]">

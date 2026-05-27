@@ -28,7 +28,7 @@ export function WizardNav({ steps, currentStep, onStepClick }: WizardNavProps) {
                       ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
                       : isCompleted
                       ? 'bg-[var(--color-accent-bg)] dark:bg-[var(--color-accent-bg-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)]'
-                      : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] text-[var(--color-text)] dark:text-[var(--color-text-dark)] shadow-sm'
+                      : 'bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] text-[var(--color-text)] dark:text-[var(--color-text-dark)]'
                   } ${clickable ? 'cursor-pointer hover:opacity-80' : ''}`}
                 >
                   {isCompleted ? (

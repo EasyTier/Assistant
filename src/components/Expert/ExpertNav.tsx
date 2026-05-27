@@ -32,7 +32,7 @@ export function ExpertNav({ activeSection, onNavigate }: ExpertNavProps) {
   return (
     <>
       {/* Mobile dropdown */}
-      <div className="md:hidden shrink-0 bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)] shadow-sm">
+      <div className="md:hidden shrink-0 bg-[var(--color-surface)] dark:bg-[var(--color-surface-dark)]">
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
