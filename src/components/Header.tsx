@@ -64,55 +64,59 @@ export function Header({ mode, onModeChange }: HeaderProps) {
             </select>
           </div>
 
-          <button
-            type="button"
-            onClick={() => onModeChange('wizard')}
-            className={`hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-xl transition-colors ${
-              mode === 'wizard'
-                ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
-                : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
-            }`}
-          >
-            <Wand2 size={14} />
-            {t('wizardMode')}
-          </button>
-          <button
-            type="button"
-            onClick={() => onModeChange('expert')}
-            className={`hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-xl transition-colors ${
-              mode === 'expert'
-                ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
-                : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
-            }`}
-          >
-            <SlidersHorizontal size={14} />
-            {t('expertMode')}
-          </button>
+          <div className="hidden sm:inline-flex rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
+            <button
+              type="button"
+              onClick={() => onModeChange('wizard')}
+              className={`inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors ${
+                mode === 'wizard'
+                  ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
+                  : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
+              }`}
+            >
+              <Wand2 size={14} />
+              {t('wizardMode')}
+            </button>
+            <button
+              type="button"
+              onClick={() => onModeChange('expert')}
+              className={`inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors ${
+                mode === 'expert'
+                  ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
+                  : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
+              }`}
+            >
+              <SlidersHorizontal size={14} />
+              {t('expertMode')}
+            </button>
+          </div>
 
           <LanguageSwitcher />
 
-          <button
-            type="button"
-            onClick={() => handleThemeChange('light')}
-            className={`inline-flex items-center justify-center w-9 h-9 rounded-xl transition-colors ${
-              theme === 'light'
-                ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
-                : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
-            }`}
-          >
-            <Sun size={14} />
-          </button>
-          <button
-            type="button"
-            onClick={() => handleThemeChange('dark')}
-            className={`inline-flex items-center justify-center w-9 h-9 rounded-xl transition-colors ${
-              theme === 'dark'
-                ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
-                : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
-            }`}
-          >
-            <Moon size={14} />
-          </button>
+          <div className="inline-flex rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
+            <button
+              type="button"
+              onClick={() => handleThemeChange('light')}
+              className={`inline-flex items-center justify-center w-9 h-9 transition-colors ${
+                theme === 'light'
+                  ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
+                  : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
+              }`}
+            >
+              <Sun size={14} />
+            </button>
+            <button
+              type="button"
+              onClick={() => handleThemeChange('dark')}
+              className={`inline-flex items-center justify-center w-9 h-9 transition-colors ${
+                theme === 'dark'
+                  ? 'bg-[var(--color-text-h)] dark:bg-[var(--color-text-h-dark)] text-white dark:text-black'
+                  : 'text-[var(--color-text)] dark:text-[var(--color-text-dark)] hover:bg-[var(--color-accent-bg)] dark:hover:bg-[var(--color-accent-bg-dark)]'
+              }`}
+            >
+              <Moon size={14} />
+            </button>
+          </div>
         </div>
       </div>
     </header>
