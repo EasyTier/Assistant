@@ -29,7 +29,7 @@ export function SectionNetwork() {
                 })
               }
               placeholder="default"
-              className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
+              className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm border border-[var(--color-border)] dark:border-[var(--color-border-dark)] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
             />
             <button
               type="button"
@@ -58,7 +58,7 @@ export function SectionNetwork() {
                 })
               }
               placeholder={t('emptyMeansNoPassword')}
-              className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
+              className="flex-1 min-w-0 px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm border border-[var(--color-border)] dark:border-[var(--color-border-dark)] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
             />
             <button
               type="button"
@@ -90,7 +90,7 @@ export function SectionNetwork() {
             value={config.instance_name ?? ''}
             onChange={(e) => updateConfig({ instance_name: e.target.value })}
             placeholder="default"
-            className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
+            className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm border border-[var(--color-border)] dark:border-[var(--color-border-dark)] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
           />
         </FormField>
 
@@ -101,7 +101,7 @@ export function SectionNetwork() {
             value={config.hostname ?? ''}
             onChange={(e) => updateConfig({ hostname: e.target.value })}
             placeholder="my-node"
-            className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
+            className="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-[var(--color-surface-dark)] text-sm text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] shadow-sm border border-[var(--color-border)] dark:border-[var(--color-border-dark)] focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] focus:shadow-md transition-shadow border-0"
           />
         </FormField>
       </div>
