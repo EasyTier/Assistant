@@ -1,25 +1,20 @@
-import { Wand2, SlidersHorizontal, Monitor, Sun, Moon } from 'lucide-react';
+import { Wand2, SlidersHorizontal, Sun, Moon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { useConfig } from '../context/ConfigContext';
 import { getTheme, setTheme, type ThemeMode } from '../utils/theme';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import type { TargetOS } from '../types/config';
+
 
 interface HeaderProps {
   mode: 'wizard' | 'expert';
   onModeChange: (mode: 'wizard' | 'expert') => void;
 }
 
-const osOptions = [
-  { value: 'linux' as TargetOS, label: 'Linux' },
-  { value: 'windows' as TargetOS, label: 'Windows' },
-  { value: 'macos' as TargetOS, label: 'macOS' },
-];
 
 export function Header({ mode, onModeChange }: HeaderProps) {
   const { t } = useTranslation();
-  const { config, updateConfig } = useConfig();
+  useConfig();
   const [theme, setThemeState] = useState<ThemeMode>(getTheme);
 
   useEffect(() => {
@@ -27,10 +22,6 @@ export function Header({ mode, onModeChange }: HeaderProps) {
     window.addEventListener('storage', handler);
     return () => window.removeEventListener('storage', handler);
   }, []);
-
-  const handleOSChange = (os: TargetOS) => {
-    updateConfig({ target_os: os });
-  };
 
   const handleThemeChange = (newTheme: ThemeMode) => {
     setTheme(newTheme);
@@ -48,22 +39,6 @@ export function Header({ mode, onModeChange }: HeaderProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Platform selector */}
-          <div className="hidden sm:inline-flex items-center gap-1.5">
-            <Monitor size={14} className="text-[var(--color-text)] dark:text-[var(--color-text-dark)]" />
-            <select
-              value={config.target_os}
-              onChange={(e) => handleOSChange(e.target.value as TargetOS)}
-              className="text-sm bg-white dark:bg-[var(--color-surface-dark)] text-[var(--color-text-h)] dark:text-[var(--color-text-h-dark)] rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--color-border)] dark:focus:ring-[var(--color-border-dark)] cursor-pointer"
-            >
-              {osOptions.map((opt) => (
-                <option key={opt.value} value={opt.value}>
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-          </div>
-
           <div className="hidden sm:inline-flex rounded-xl border border-[var(--color-border)] dark:border-[var(--color-border-dark)] overflow-hidden">
             <button
               type="button"

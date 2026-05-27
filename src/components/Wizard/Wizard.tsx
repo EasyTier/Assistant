@@ -8,12 +8,11 @@ import { StepIP } from './StepIP';
 import { StepConnections } from './StepConnections';
 import { StepProxyRoutes } from './StepProxyRoutes';
 import { StepAdvanced } from './StepAdvanced';
-import { StepPlatform } from './StepPlatform';
+
 import { downloadToml } from '../../utils/toml';
 import { StepReview } from './StepReview';
 
 const stepComponents = [
-  StepPlatform,
   StepNetwork,
   StepIP,
   StepConnections,
@@ -28,7 +27,6 @@ export function Wizard() {
   const [currentStep, setCurrentStep] = useState(0);
 
   const steps = [
-    t('platformTitle'),
     t('networkIdentity'),
     t('ipSettings'),
     t('connections'),
