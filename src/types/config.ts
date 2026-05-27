@@ -168,5 +168,5 @@ export const defaultConfig = (target_os: TargetOS = 'linux'): EasyTierConfig => 
     network_secret: randomSecret(),
   },
   dhcp: true,
-  flags: { ...easytierDefaults.flags, enable_ipv6: false },
+  flags: { ...easytierDefaults.flags },
 });
